@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- NORMAL BUTTONS -->
+
+    <style name="CalcButton">
+
+        <item name="android:layout_width">0dp</item>
+
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_margin">8dp</item>
+
+        <item name="android:textSize">28sp</item>
+
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+
+        <item name="android:backgroundTint">#5DADE2</item>
+
+    </style>
+
+    <!-- OPERATOR BUTTONS -->
+
+    <style name="OperatorButton">
+
+        <item name="android:layout_width">0dp</item>
+
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_margin">8dp</item>
+
+        <item name="android:textSize">30sp</item>
+
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+
+        <item name="android:backgroundTint">#00BFFF</item>
+
+    </style>
+
+    <!-- ZERO BUTTON -->
+
+    <style name="ZeroButton">
+
+        <item name="android:layout_width">0dp</item>
+
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_margin">8dp</item>
+
+        <item name="android:textSize">28sp</item>
+
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+
+        <item name="android:backgroundTint">#5DADE2</item>
+
+    </style>
+
+    <!-- SCIENTIFIC BUTTONS -->
+
+    <style name="ScientificButton">
+
+        <item name="android:layout_width">0dp</item>
+
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_margin">6dp</item>
+
+        <item name="android:textSize">20sp</item>
+
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+
+        <item name="android:backgroundTint">#1E3A5F</item>
+
+    </style>
+
+</resources>

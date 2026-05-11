@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000814"
+    android:paddingTop="25dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp">
+
+    <!-- TOP BAR -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tabCalculator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calculator"
+            android:textColor="#00BFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tabHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="History"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- HISTORY -->
+
+    <ScrollView
+        android:id="@+id/historyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#08111F"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#87CEFA"
+            android:textSize="18sp"/>
+
+    </ScrollView>
+
+    <!-- CONVERTER LAYOUT -->
+
+    <LinearLayout
+        android:id="@+id/converterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit Converter"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter Value"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#87CEFA"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:backgroundTint="#00BFFF"/>
+
+        <!-- METER TO CM -->
+
+        <Button
+            android:id="@+id/btnMeterToCm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Meter → CM"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#00BFFF"
+            android:layout_marginTop="20dp"/>
+
+        <!-- CM TO METER -->
+
+        <Button
+            android:id="@+id/btnCmToMeter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CM → Meter"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#5DADE2"
+            android:layout_marginTop="12dp"/>
+
+        <!-- KM TO METER -->
+
+        <Button
+            android:id="@+id/btnKmToMeter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="KM → Meter"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#5DADE2"
+            android:layout_marginTop="12dp"/>
+
+        <!-- METER TO KM -->
+
+        <Button
+            android:id="@+id/btnMeterToKm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Meter → KM"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#5DADE2"
+            android:layout_marginTop="12dp"/>
+
+        <!-- KG TO GRAM -->
+
+        <Button
+            android:id="@+id/btnKgToGram"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="KG → Gram"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#5DADE2"
+            android:layout_marginTop="12dp"/>
+
+        <!-- GRAM TO KG -->
+
+        <Button
+            android:id="@+id/btnGramToKg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Gram → KG"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#5DADE2"
+            android:layout_marginTop="12dp"/>
+
+        <!-- RESULT -->
+
+        <TextView
+            android:id="@+id/tvConverterResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"/>
+
+    </LinearLayout>
+
+    <!-- CALCULATOR -->
+
+    <LinearLayout
+        android:id="@+id/calculatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- SCIENTIFIC BUTTON -->
+
+        <Button
+            android:id="@+id/btnScientific"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="⌘"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#00BFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- SCIENTIFIC PANEL -->
+
+        <LinearLayout
+            android:id="@+id/scientificLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- SCIENTIFIC ROW 1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <Button
+                    android:id="@+id/btnSin"
+                    style="@style/ScientificButton"
+                    android:text="sin"/>
+
+                <Button
+                    android:id="@+id/btnCos"
+                    style="@style/ScientificButton"
+                    android:text="cos"/>
+
+                <Button
+                    android:id="@+id/btnTan"
+                    style="@style/ScientificButton"
+                    android:text="tan"/>
+
+            </LinearLayout>
+
+            <!-- SCIENTIFIC ROW 2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <Button
+                    android:id="@+id/btnSqrt"
+                    style="@style/ScientificButton"
+                    android:text="√"/>
+
+                <Button
+                    android:id="@+id/btnPower"
+                    style="@style/ScientificButton"
+                    android:text="x²"/>
+
+                <Button
+                    android:id="@+id/btnLog"
+                    style="@style/ScientificButton"
+                    android:text="log"/>
+
+                <Button
+                    android:id="@+id/btnClose"
+                    style="@style/ScientificButton"
+                    android:text=")"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- RESULT -->
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:gravity="bottom|end"
+            android:padding="20dp"/>
+
+        <!-- BUTTON AREA -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- ROW 1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnPercent"
+                    style="@style/CalcButton"
+                    android:text="%"/>
+
+                <Button
+                    android:id="@+id/btnBack"
+                    style="@style/CalcButton"
+                    android:text="⌫"/>
+
+                <Button
+                    android:id="@+id/btnClear"
+                    style="@style/CalcButton"
+                    android:text="C"/>
+
+                <Button
+                    android:id="@+id/btnDivide"
+                    style="@style/OperatorButton"
+                    android:text="/"/>
+
+            </LinearLayout>
+
+            <!-- ROW 2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn7"
+                    style="@style/CalcButton"
+                    android:text="7"/>
+
+                <Button
+                    android:id="@+id/btn8"
+                    style="@style/CalcButton"
+                    android:text="8"/>
+
+                <Button
+                    android:id="@+id/btn9"
+                    style="@style/CalcButton"
+                    android:text="9"/>
+
+                <Button
+                    android:id="@+id/btnMultiply"
+                    style="@style/OperatorButton"
+                    android:text="×"/>
+
+            </LinearLayout>
+
+            <!-- ROW 3 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn4"
+                    style="@style/CalcButton"
+                    android:text="4"/>
+
+                <Button
+                    android:id="@+id/btn5"
+                    style="@style/CalcButton"
+                    android:text="5"/>
+
+                <Button
+                    android:id="@+id/btn6"
+                    style="@style/CalcButton"
+                    android:text="6"/>
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    style="@style/OperatorButton"
+                    android:text="-"/>
+
+            </LinearLayout>
+
+            <!-- ROW 4 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn1"
+                    style="@style/CalcButton"
+                    android:text="1"/>
+
+                <Button
+                    android:id="@+id/btn2"
+                    style="@style/CalcButton"
+                    android:text="2"/>
+
+                <Button
+                    android:id="@+id/btn3"
+                    style="@style/CalcButton"
+                    android:text="3"/>
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    style="@style/OperatorButton"
+                    android:text="+"/>
+
+            </LinearLayout>
+
+            <!-- ROW 5 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnConverter"
+                    style="@style/OperatorButton"
+                    android:text="⇄"/>
+
+                <Button
+                    android:id="@+id/btn0"
+                    style="@style/ZeroButton"
+                    android:text="0"/>
+
+                <Button
+                    android:id="@+id/btnDot"
+                    style="@style/CalcButton"
+                    android:text="."/>
+
+                <Button
+                    android:id="@+id/btnEqual"
+                    style="@style/OperatorButton"
+                    android:text="="/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
