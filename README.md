@@ -41,13 +41,16 @@ A modern Android Calculator App built using Kotlin and XML with a premium UI des
 ## Screenshots
 
 ### Calculator Screen
-(Add screenshot here)
+![Calculator](Homescreen%20calculator.png)
+
+### Operations Screen
+![Operations](Operations.png)
 
 ### Converter Screen
-(Add screenshot here)
+![Converter](Unit%20converter.png)
 
 ### History Screen
-(Add screenshot here)
+![History](history%20page.png)
 
 ## Project Purpose
 
